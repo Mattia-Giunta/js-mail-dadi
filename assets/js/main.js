@@ -29,13 +29,57 @@ function randomNumber( min , max ){
    
 }
 
-console.log(randomNumber(1,6))
 
+// costante del player
 const playerHTML = document.getElementById('player');
-console.log(playerHTML);
 
+// costante computer
 const computerHTLM = document.getElementById('computer');
-console.log(computerHTLM);
 
+// costante bottone
 const btnPlayHTML = document.getElementById('btnPlay');
-console.log(btnPlayHTML);
+
+// costante vinto
+const winHTML = document.getElementById('win');
+
+// costante perso
+const loseHTML = document.getElementById('lose');
+
+// costante pareggio
+const drawHTML = document.getElementById('draw');
+
+
+// funzione al click
+btnPlayHTML.addEventListener('click', function(){
+
+    let playerNumber = randomNumber(1, 6);
+    let computerNumber = randomNumber(1, 6);
+    
+    drawHTML.classList.add('d-none');
+    winHTML.classList.add('d-none');
+    loseHTML.classList.add('d-none');
+
+    if ( playerNumber === computerNumber ){
+
+        playerHTML.innerText = `${playerNumber}`; 
+        computerHTLM.innerText = `${computerNumber}`;
+        drawHTML.classList.remove('d-none');
+
+    } else if ( playerNumber > computerNumber ) {
+
+        playerHTML.innerText = `${playerNumber}`; 
+        computerHTLM.innerText = `${computerNumber}`;
+        winHTML.classList.remove('d-none');
+
+    } else   {
+
+        playerHTML.innerText = `${playerNumber}`; 
+        computerHTLM.innerText = `${computerNumber}`;
+        loseHTML.classList.remove('d-none');
+    }   
+}
+)
+// Terminato esercizio dei dadi
+
+
+// Creazione controllo mail
