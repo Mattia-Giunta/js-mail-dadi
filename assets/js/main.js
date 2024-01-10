@@ -1,3 +1,5 @@
+
+
 // **Gioco dei dadi**
 // Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
 // Stabilire il vincitore, in base a chi fa il punteggio più alto.
@@ -15,3 +17,25 @@
 // 3. si ma noi cosa vogliamo fare?
 // 4. torniamo a scrivere in italiano
 // 5. proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro programma così come lo faremmo "a mano"
+
+
+
+// creazione gioco dei dadi
+
+// funzione custom
+function randomNumber( min , max ){
+
+    return Math.floor(Math.random() * ( max - min + 1 ) + min )
+   
+}
+
+console.log(randomNumber(1,6))
+
+const playerHTML = document.getElementById('player');
+console.log(playerHTML);
+
+const computerHTLM = document.getElementById('computer');
+console.log(computerHTLM);
+
+const btnPlayHTML = document.getElementById('btnPlay');
+console.log(btnPlayHTML);
