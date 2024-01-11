@@ -89,12 +89,13 @@ btnPlayHTML.addEventListener('click', function(){
 
 // Creazione controllo mail
 
-
+// costante del div contenitore
 const containerMailHTML = document.getElementById('containerMail');
 
+// costante del bottone
 const btnSubmitHTML = document.getElementById('btnSubmit');
 
-
+// funzione al click
 btnSubmitHTML.addEventListener('click', function(){
 
     // array delle mail
@@ -112,13 +113,11 @@ btnSubmitHTML.addEventListener('click', function(){
 
             mailControl = true;
 
-            break;
-
         } 
 
     }
 
-    if ( mailControl ){
+    if ( mailControl === true ){
 
         containerMailHTML.innerHTML += '<p class= "text-success fs-3 "> Ben tornato!!! Puoi accedere al tuo profilo </p>';
 
